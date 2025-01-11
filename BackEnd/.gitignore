@@ -1,0 +1,72 @@
+# Ignore Maven build files
+target/
+*.jar
+*.war
+*.ear
+
+# Ignore Gradle build files
+build/
+*.class
+
+# Ignore configuration files
+*.log
+*.properties
+*.yml
+*.yaml
+
+# Ignore IDE files
+/.idea/
+/*.iml
+/.vscode/
+/*.classpath
+/*.project
+/.settings/
+/*.factorypath
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore application-specific files
+.env
+/application.properties
+/application.yml
+/application-dev.properties
+/application-prod.properties
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.swp
+*~*
+
+# Ignore IntelliJ IDEA workspace files
+.idea/
+*.iws
+
+# Ignore Eclipse/STS workspace files
+.classpath
+.project
+.settings/
+
+# Ignore generated files
+/.mvn/wrapper/maven-wrapper.jar
+
+# Ignore logs and other runtime files
+logs/
+*.log
+*.pid
+hs_err_pid*.log
+
+# Ignore dependencies
+/lib/
+
+# Ignore node_modules (if front-end code exists)
+node_modules/
+
+# Ignore additional tools and temporary files
+*.gz
+*.zip
+*.tar.gz
+*.rar
+*.7z
