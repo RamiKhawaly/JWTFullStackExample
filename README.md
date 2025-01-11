@@ -8,8 +8,8 @@ The repository is organized into the following structure:
 
 ```
 .
-|-- frontend/     # Angular frontend application
-|-- backend/      # Spring Boot backend application
+|-- FrontEnd/     # Angular frontend application
+|-- BackEnd/      # Spring Boot backend application
 ```
 
 ### Frontend
