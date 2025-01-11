@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 
 const JWT_TOKEN_ENTRY = "jwtToken"
@@ -10,7 +11,7 @@ const JWT_TOKEN_ENTRY = "jwtToken"
 
 export class AuthService {
 
-  loginUrl:string = "http://localhost:8080/authentication/login";
+  loginUrl:string = `${environment.apiBaseUrl}/authentication/login`;
 
   public token:string="";
   constructor(private http:HttpClient) {

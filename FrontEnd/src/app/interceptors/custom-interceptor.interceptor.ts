@@ -1,9 +1,10 @@
 import { inject } from '@angular/core';
 import { HttpInterceptorFn } from '@angular/common/http';
-import { AuthService } from './auth.service';
+import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 export const customInterceptorInterceptor: HttpInterceptorFn = (req, next) => {
   const authService = inject(AuthService); // Inject AuthService
@@ -11,7 +12,7 @@ export const customInterceptorInterceptor: HttpInterceptorFn = (req, next) => {
   const token = authService.token; // Retrieve the token from AuthService
 
   // Skip adding Authorization header for /login endpoint
-  if (req.url.includes('/login')) {
+  if (req.url.includes(`${environment.loginPage}`)) {
     return next(req);
   }
 
@@ -33,7 +34,7 @@ export const customInterceptorInterceptor: HttpInterceptorFn = (req, next) => {
         authService.logout(); // Assuming logout clears tokens and session
 
         // Redirect to the login page
-        router.navigate(['/login']);
+        router.navigate([`${environment.loginPage}`]);
       }
       return throwError(() => error); // Rethrow the error
     })
