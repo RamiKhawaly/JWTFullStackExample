@@ -1,0 +1,14 @@
+<!-- data-list.component.html -->
+<div class="container py-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <!-- Loop through each item in dataList -->
+    <div class="col" *ngFor="let item of dataList">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

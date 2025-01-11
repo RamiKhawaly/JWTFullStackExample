@@ -1,0 +1,63 @@
+<div class="container">
+  <div
+    class="row justify-content-center align-items-center"
+    style="min-height: 100vh;"
+  >
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <!-- Title (Optional) -->
+          <h3 class="text-center mb-4">Weolcome to R-Labs system</h3>
+
+          <!-- Login Form -->
+          <form>
+            <!-- Email/Username Field -->
+            <div class="mb-3">
+              <label for="EmailId" class="form-label">User name </label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </span>
+                <input
+                  type="text"
+                  id="EmailId"
+                  name="EmailId"
+                  [(ngModel)]="userData.username"
+                  class="form-control"
+                  placeholder="Your Email"
+                />
+              </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-3">
+              <label for="Password" class="form-label">Password</label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="fas fa-lock"></i>
+                </span>
+                <input
+                  type="password"
+                  id="Password"
+                  name="Password"
+                  [(ngModel)]="userData.password"
+                  class="form-control"
+                  placeholder="Your Password"
+                />
+              </div>
+            </div>
+
+            <!-- Login Button -->
+            <button
+              class="btn btn-primary w-100"
+              type="button"
+              (click)="onLogin()"
+            >
+              Log In Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
