@@ -1,5 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user.model';
 
 @Component({
@@ -15,10 +17,16 @@ export class LoginComponent {
     username:"",
     password:""
   };
+  authService= inject(AuthService);
+  router = inject(Router);
 
-  onLogin()
-  {
-    alert('Not implemented');
+
+  onLogin() {
+    this.authService.login(this.userData.username, this.userData.password, ()=>{
+      this.router.navigateByUrl('dashboard')
+    },
+  ()=>{
+    alert("Error login")
+  })
   }
-
 }

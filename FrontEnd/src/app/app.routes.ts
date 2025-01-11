@@ -13,7 +13,7 @@ export const routes: Routes = [
         component:LoginComponent
     },
     {
-        path:'dashboard',
-        component:DashboardComponent
+      path:'dashboard',
+      component:DashboardComponent
     }
 ];

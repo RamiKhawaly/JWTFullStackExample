@@ -9,5 +9,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'JWTExample';
+  title = 'angular_18_login_with_jwt_token';
 }
