@@ -12,10 +12,21 @@ import org.springframework.web.filter.CorsFilter;
 import java.util.List;
 
 @SpringBootApplication
-public class AuthenticationWithJWTApp {
+public class AuthenticationWithJWTApp implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AuthenticationWithJWTApp.class, args);
 	}
+
+
+
+
+	@Override
+	public void run(String... args) throws Exception {
+
+	}
+
+
+
 
 }
