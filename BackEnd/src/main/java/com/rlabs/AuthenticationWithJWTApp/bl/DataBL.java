@@ -1,9 +1,7 @@
 package com.rlabs.AuthenticationWithJWTApp.bl;
 
 import com.rlabs.AuthenticationWithJWTApp.entities.Data;
-import com.rlabs.AuthenticationWithJWTApp.entities.User;
 import com.rlabs.AuthenticationWithJWTApp.repositories.DataRepository;
-import com.rlabs.AuthenticationWithJWTApp.repositories.UserRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

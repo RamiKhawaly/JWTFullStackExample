@@ -10,7 +10,6 @@ build/
 
 # Ignore configuration files
 *.log
-*.properties
 *.yml
 *.yaml
 
